@@ -36,11 +36,11 @@ def calc_change(data, prev_data):
     if (rate - prev_rate) > config.THRESHOLD:
         if rate > prev_rate:
             message = """\
-            Bitcoin has risen from PHP%s to PHP%s. Maybe you should sell!
+        Bitcoin has risen from PHP%s to PHP%s. Maybe you should sell!\
             """ % (prev_data["bpi"]["PHP"]["rate"], data["bpi"]["PHP"]["rate"])
         else:
             message = """\
-            Bitcoin has dropped from PHP%s to PHP%s. Maybe you should buy!
+        Bitcoin has dropped from PHP%s to PHP%s. Maybe you should buy!\
             """ % (prev_data["bpi"]["PHP"]["rate"], data["bpi"]["PHP"]["rate"])
 
         push_notification(message)
